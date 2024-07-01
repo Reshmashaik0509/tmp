@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Account activation</title>
+    <meta charset="UTF-8"/>
+    <link rel="icon" href="${baseUrl}/favicon.ico"/>
+</head>
+<body>
+<p>Dear  <b th:text="${user.name}"></b>,</p>
+<p>Your account has been created for the email:  <b th:text="${user.email}"></b>, please click on the URL below to activate it:</p>
+<p>
+    <a th:href="${url}" th:text="${url}" th:with="url=(@{|${baseUrl}activate?key=${user.activationKey}&email=${encodedEmail}|})">Activation
+        link</a>
+</p>
+
+<p>Regards,</p>
+<p>TejasVI</p>
+</body>
+</html>

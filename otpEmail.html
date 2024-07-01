@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Account Verification</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link rel="icon" th:href="@{|${baseUrl}/favicon.ico|}"/>
+</head>
+<body>
+<p>Dear User</p>
+<p>Your OTP: [[${user.verificationOtp}]]</p>
+<p>
+    <span>Regards</span>
+</p>
+</body>
+</html>
